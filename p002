@@ -1,0 +1,19 @@
+i = 1
+print i
+j = 2
+print j
+tot = 2
+q = 0
+while q <= 4000000:
+    seq = []
+    seq.append(i)
+    seq.append(j)
+    q = i + j
+    seq.append(q)
+    print q
+    if q % 2 == 0:
+        tot = tot + q
+    i = j
+    j = q
+print "total:",
+print tot
