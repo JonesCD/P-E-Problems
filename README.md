@@ -1,2 +1,2 @@
-# Project-Euler
-Project Euler problems in Python
+# P-E Coding problems
+P-E problems worked out in Python
