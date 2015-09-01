@@ -24,12 +24,31 @@ with open(filename, 'rb') as file:
 	for row in file:
 		names = row
 
-namessorted = names.split('","')
+def addname(name):
+	lowname = name.lower()
+	nameval = 0
+	for i in lowname:
+		nameval += ord(i) - 96
+	return nameval
 
-numnames = len(namessorted)
+names1 = names.split('","')
+names1[0] = names1[0][1:]
+names1[-1] = names1[-1][:-1]
+
+numnames = len(names1)
+#print names1
+namessorted = sorted(names1)
+
+n = 1
+tot = 0
+for name in namessorted:
+	tot = tot + addname(name) * n
+	n += 1
+	
 
 print namessorted
 print numnames
+print tot
 
 
 
